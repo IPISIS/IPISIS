@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(to right, #ffecd2, #fcb69f); }
+            100% { background: linear-gradient(to right, #a1c4fd, #c2e9fb); }
+        }
+        h1 {
+            color: #ff6f61;
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+        p {
+            color: #333;
+            font-size: 24px;
+            animation: fadeIn 3s ease-in-out 1s;
+            white-space: pre-line;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hearts {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        .heart {
+            width: 50px;
+            height: 70px;
+            background-color: rgba(255, 111, 97, 0.7);
+            position: absolute;
+            bottom: -100px;
+            animation: float 5s infinite ease-in-out;
+            transform: rotate(-45deg);
+            left: 50%;
+            margin-left: -25px;
+        }
+        .heart::before,
+        .heart::after {
+            content: "";
+            width: 50px;
+            height: 70px;
+            background-color: rgba(255, 111, 97, 0.7);
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+        .heart::after {
+            top: 0;
+            left: 25px;
+        }
+        .heart:nth-child(2) {
+            background-color: rgba(255, 205, 148, 0.7);
+            left: calc(50% + 70px);
+            animation-delay: 1s;
+        }
+        .heart:nth-child(2)::before,
+        .heart:nth-child(2)::after {
+            background-color: rgba(255, 205, 148, 0.7);
+        }
+        .heart:nth-child(3) {
+            background-color: rgba(255, 155, 133, 0.7);
+            left: calc(50% - 70px);
+            animation-delay: 2s;
+        }
+        .heart:nth-child(3)::before,
+        .heart:nth-child(3)::after {
+            background-color: rgba(255, 155, 133, 0.7);
+        }
+        .heart:nth-child(4) {
+            background-color: rgba(247, 183, 163, 0.7);
+            left: calc(50% + 140px);
+            animation-delay: 3s;
+        }
+        .heart:nth-child(4)::before,
+        .heart:nth-child(4)::after {
+            background-color: rgba(247, 183, 163, 0.7);
+        }
+        .heart:nth-child(5) {
+            background-color: rgba(173, 216, 230, 0.7);
+            left: calc(50% - 140px);
+            animation-delay: 4s;
+        }
+        .heart:nth-child(5)::before,
+        .heart:nth-child(5)::after {
+            background-color: rgba(173, 216, 230, 0.7);
+        }
+        .heart:nth-child(6) {
+            background-color: rgba(144, 238, 144, 0.7);
+            left: calc(50% + 210px);
+            animation-delay: 5s;
+        }
+        .heart:nth-child(6)::before,
+        .heart:nth-child(6)::after {
+            background-color: rgba(144, 238, 144, 0.7);
+        }
+        .heart:nth-child(7) {
+            background-color: rgba(255, 182, 193, 0.7);
+            left: calc(50% - 210px);
+            animation-delay: 6s;
+        }
+        .heart:nth-child(7)::before,
+        .heart:nth-child(7)::after {
+            background-color: rgba(255, 182, 193, 0.7);
+        }
+        .heart:nth-child(8) {
+            background-color: rgba(255, 228, 181, 0.7);
+            left: calc(50% + 280px);
+            animation-delay: 7s;
+        }
+        .heart:nth-child(8)::before,
+        .heart:nth-child(8)::after {
+            background-color: rgba(255, 228, 181, 0.7);
+        }
+        @keyframes float {
+            0% { transform: translateY(0) rotate(-45deg); }
+            50% { transform: translateY(-300px) rotate(-45deg); }
+            100% { transform: translateY(0) rotate(-45deg); }
+        }
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            animation: twinkling 5s infinite;
+        }
+        @keyframes twinkling {
+            0% { background-position: 0 0; }
+            100% { background-position: -1000px 1000px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <h1>生日快乐！</h1>
+    <p>今逢卿之寿辰，仆怀欣喜之情，不胜言表。卿姿容姝丽，德行淑善，文采风流，实乃仆心之所系。愿卿此生日，乐享安康，岁岁年年，永葆青春。愿卿福寿绵延，吉祥如意，才情不衰，心怀欢悦。仆当倍加珍惜，共度长久，天涯海角，心意不改。
+
+愿佳人常欢笑，岁月静好，福禄寿喜，万事顺遂。</p>
+    <div class="hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+    <script>
+        // You can add more JavaScript if needed
+    </script>
+</body>
+</html>
